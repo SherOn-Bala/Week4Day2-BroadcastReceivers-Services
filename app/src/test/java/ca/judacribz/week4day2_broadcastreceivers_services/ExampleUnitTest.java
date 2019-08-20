@@ -1,4 +1,4 @@
-package ca.judacribz.week4day2_broadcastreceiversandservices;
+package ca.judacribz.week4day2_broadcastreceivers_services;
 
 import org.junit.Test;
 

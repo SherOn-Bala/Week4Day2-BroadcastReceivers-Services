@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Week4Day2-BroadcastReceiversAndServices</string>
+    <string name="app_name">Broadcast Receivers / Services</string>
+
+    <!-- Battery charging status -->
+    <string name="battery_charging">Battery is charging</string>
+    <string name="battery_discharging">Battery is discharging\n</string>
+    <string name="battery_full">Battery is full\n</string>
+    <string name="airplane_mode">Airplane mode is turned on</string>
+    <string name="screen_on">The screen is on</string>
+    <string name="screen_off">The screen was turned off</string>
+    <string name="app_uninstalled">An app was uninstalled</string>
 </resources>

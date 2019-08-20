@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ca.judacribz.week4day2_broadcastreceiversandservices">
+    package="ca.judacribz.week4day2_broadcastreceivers_services">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="ca.judacribz.week4day2_broadcastreceivers_services.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
