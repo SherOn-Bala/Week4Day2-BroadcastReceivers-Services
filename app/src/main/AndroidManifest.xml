@@ -20,5 +20,6 @@
             </intent-filter>
         </activity>
         <service android:name=".ForegroundService" />
+        <service android:name=".PersonService" />
     </application>
 </manifest>
