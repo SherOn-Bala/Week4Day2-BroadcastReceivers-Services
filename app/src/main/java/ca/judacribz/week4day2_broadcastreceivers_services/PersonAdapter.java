@@ -1,6 +1,11 @@
 package ca.judacribz.week4day2_broadcastreceivers_services;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Parcelable;
+import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,10 +51,35 @@ class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder> {
                 tvName,
                 tvFrom;
 
+        View view;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            view = itemView;
             tvName = itemView.findViewById(R.id.tvName);
             tvFrom = itemView.findViewById(R.id.tvFrom);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent notificationIntent = new Intent(view.getContext(), ForegroundService.class);
+                    PendingIntent pendingIntent = PendingIntent.getService(
+                            view.getContext(),
+                            0,
+                            notificationIntent,
+                            0
+                    );
+                    AlarmManager alarmManager = (AlarmManager)view.getContext().getSystemService(
+                            Context.ALARM_SERVICE
+                    );
+                    alarmManager.set(
+                            AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                            SystemClock.elapsedRealtime() + 5000,
+                            pendingIntent
+                    );
+
+                }
+            });
         }
 
         void setViews(Person person) {

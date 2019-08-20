@@ -51,7 +51,7 @@ public class ForegroundService extends Service {
                     .setSmallIcon(R.drawable.ic_music)
                     .setPriority(NotificationCompat.PRIORITY_HIGH)
                     .setDefaults(NotificationCompat.DEFAULT_ALL)
-                    .setAutoCancel(false);
+                    .setAutoCancel(true);
 
             mNotifyManager.notify(0, builder.build());
         }

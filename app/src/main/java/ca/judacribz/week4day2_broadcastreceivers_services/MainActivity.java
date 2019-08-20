@@ -27,15 +27,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        rvPersons = findViewById(R.id.rvPersons);
+        rvPersons.setLayoutManager(new LinearLayoutManager(this));
+
+
         personReceiver = new PersonReceiver(new Handler());
         Intent intent = new Intent(this, PersonService.class);
         intent.putExtra("receiverTag", personReceiver);
         startService(intent);
 
-        rvPersons = findViewById(R.id.rvPersons);
-        rvPersons.setLayoutManager(new LinearLayoutManager(this));
-
-        br = new SystemReceiver();
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED);
@@ -43,11 +43,11 @@ public class MainActivity extends AppCompatActivity {
         filter.addAction(Intent.ACTION_SCREEN_ON);
         filter.addAction(Intent.ACTION_PACKAGE_REMOVED);
         filter.addAction(Intent.ACTION_SCREEN_OFF);
-
+        br = new SystemReceiver();
         registerReceiver(br, filter);
 
-        Intent i = new Intent(this, ForegroundService.class);
-        startService(i);
+//        Intent i = new Intent(this, ForegroundService.class);
+//        startService(i);
     }
 
     @Override
@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onReceiveResult(int resultCode, Bundle resultData) {
-            Toast.makeText(MainActivity.this, "sdfsdfsd", Toast.LENGTH_SHORT).show();
             if (resultCode == RESULT_OK) {
                 ArrayList<Person> personArrayList = resultData.getParcelableArrayList(EXTRA_PERSON);
                 rvPersons.setAdapter(new PersonAdapter(personArrayList));
