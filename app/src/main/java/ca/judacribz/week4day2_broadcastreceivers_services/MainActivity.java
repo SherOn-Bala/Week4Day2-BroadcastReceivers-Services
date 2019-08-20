@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         filter.addAction(Intent.ACTION_SCREEN_OFF);
 
         registerReceiver(br, filter);
+
+        Intent i = new Intent(this, ForegroundService.class);
+        startService(i);
     }
 
     @Override

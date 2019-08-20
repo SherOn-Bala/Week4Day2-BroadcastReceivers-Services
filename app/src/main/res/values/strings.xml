@@ -9,4 +9,5 @@
     <string name="screen_on">The screen is on</string>
     <string name="screen_off">The screen was turned off</string>
     <string name="app_uninstalled">An app was uninstalled</string>
+    <string name="stop_music">Click to stop music</string>
 </resources>

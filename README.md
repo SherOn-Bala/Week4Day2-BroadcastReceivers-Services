@@ -1,3 +1,5 @@
+## Broadcast Receivers / Services ##
+
 ### Coding ###
 1. Create an application to use 5 systems broadcasts
 2. Create a foreground service with notification. Clicking on the notification will stop the foreground music. (You can just push your changes to your previous “services” homework for this.
