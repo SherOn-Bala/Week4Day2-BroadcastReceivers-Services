@@ -8,7 +8,7 @@
 5. Complete the work manager code lab:  [Completed CodeLab](https://github.com/SherOn-Bala/Week4Day2-CodeLab-WorkManager)
 
 ### Research ###
-1. What is the difference in an started service and a bound service?
+1. <b>What is the difference in an started service and a bound service?</b>
 * Started Service:
 	* Launched by other application components (such as activity or broadcast receiver).
 	* Potentially run indefinitely in the background unless the service is stopped or destroyed by the Android runtime system in order to free up resources.
@@ -17,18 +17,18 @@
 	* Through implementation of interprocess communication, interaction can take place across process boundaries.
 	* bindService() called to bind app component to it.
 	* Offers client-server interface that allows components to interact with the service.
-2. Define what a observer/ subscriber relation is.
+2. <b>Define what a observer/ subscriber relation is.</b>
 	* It is a one-to-many relation where the observer can broadcast messages about changes or actions.
 	* Subscribers that are subscribed to specific events will receive messages for those events as the observer sends them.
-3. Define what a client/server relation is.
+3. <b>Define what a client/server relation is.</b>
 	* A distributed app structure that partitions tasks or workloads between providers of a resource or service, which are the servers, service requesters, which are the clients.
-4. Define each of the HTTP verbs
+4. <b>Define each of the HTTP verbs</b>
 * POST - Create new resources.
 * GET - Read or Retrieve a representation of a resource.
 * PUT - Updating or replacing a resource.
 * PATCH - Updating/Modifying part of a resource.
 * DELETE - Deletes a resource.
-5. Describe at least one use for each service (Foreground, Background, Intent, Bound)
+5. <b>Describe at least one use for each service (Foreground, Background, Intent, Bound)</b>
 * Foreground - Performs some operation that is noticable to the user such as playing music in the foreground.
 * Background - performs an operation that isn't direction noticed by the user, such as long running queries with a database.
 * Intent - used for long tasks that require no communication to the Main Thread such as downloading a big file from the internet.
