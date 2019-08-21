@@ -1,10 +1,12 @@
-package ca.judacribz.week4day2_broadcastreceivers_services;
+package ca.judacribz.week4day2_broadcastreceivers_services.broadcast_receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.BatteryManager;
 import android.widget.Toast;
+
+import ca.judacribz.week4day2_broadcastreceivers_services.R;
 
 import static android.content.Intent.EXTRA_UID;
 

@@ -1,7 +1,9 @@
-package ca.judacribz.week4day2_broadcastreceivers_services;
+package ca.judacribz.week4day2_broadcastreceivers_services.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import java.util.Locale;
 
 public class Person implements Parcelable {
     String
@@ -38,6 +40,25 @@ public class Person implements Parcelable {
             return new Person[size];
         }
     };
+
+    public String getName() {
+        return String.format(
+                Locale.US,
+                "%s, %s",
+                getLastName(),
+                getFirstName()
+        );
+    }
+
+    public String getFrom() {
+        return String.format(
+                Locale.US,
+                "%s, %s, %s",
+                getCity(),
+                getState(),
+                getCountry()
+        );
+    }
 
     public String getFirstName() {
         return firstName;

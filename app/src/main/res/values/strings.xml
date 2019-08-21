@@ -5,9 +5,16 @@
     <string name="battery_charging">Battery is charging</string>
     <string name="battery_discharging">Battery is discharging\n</string>
     <string name="battery_full">Battery is full\n</string>
+
+    <!-- Other statuses-->
     <string name="airplane_mode">Airplane mode is turned on</string>
     <string name="screen_on">The screen is on</string>
     <string name="screen_off">The screen was turned off</string>
     <string name="app_uninstalled">An app was uninstalled</string>
+
+
+    <string name="notify_channel_desc">Notifications from Broadcast Receivers/Services App</string>
+    <string name="notify_channel_name">Broadcast Receivers / Services</string>
     <string name="stop_music">Click to stop music</string>
+    <string name="play_music">Play Music</string>
 </resources>
