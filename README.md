@@ -5,7 +5,7 @@
 2. Create a foreground service with notification. Clicking on the notification will stop the foreground music. (You can just push your changes to your previous “services” homework for this.
 3. Create an IntentService to create a list of random objects (The objects should have atleast 4 fields including an image). Populate the recyclerView in the same activity which starts the intent service. Pass the data using a broadcast receiver.
 4. Use the AlarmManager to send a notification after 5 secs on clicking each list item. The notification should have the object that was clicked on
-5. Complete the work manager code lab:  https://codelabs.developers.google.com/codelabs/android-workmanager/#0
+5. Complete the work manager code lab:  [Completed CodeLab](https://github.com/SherOn-Bala/Week4Day2-CodeLab-WorkManager)
 
 ### Research ###
 1. What is the difference in an started service and a bound service?
